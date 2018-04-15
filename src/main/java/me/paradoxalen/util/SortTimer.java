@@ -1,6 +1,7 @@
 package me.paradoxalen.util;
 
-import me.paradoxalen.sorts.algorithm.Sort;
+
+import me.paradoxalen.shellsort.Sort;
 
 import java.util.Comparator;
 import java.util.List;
