@@ -20,4 +20,17 @@ public class SortUtil {
         return true;
     }
 
+    public static <T> boolean isSorted(T[] array, Comparator<? super T> comparator) {
+        return isSorted(array, 0, array.length, comparator);
+    }
+
+    public static <T> boolean isSorted(T[] array, int from, int to, Comparator<? super T> comparator) {
+        for (int i = from + 1; i < to; i++) {
+            if (comparator.compare(array[i], array[i - 1]) > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
